@@ -1,0 +1,270 @@
+<?xml version="1.0" ?>
+<EXPERIMENT_PACKAGE_SET>
+    <EXPERIMENT_PACKAGE>
+        <EXPERIMENT accession="SRX4178246" alias="27-24685_H:12: 95437">
+            <IDENTIFIERS>
+                <PRIMARY_ID>SRX4178246</PRIMARY_ID>
+            </IDENTIFIERS>
+            <TITLE>Germline WGS of Homo sapiens: colorectal cancer case-control: Sample
+                95437</TITLE>
+            <STUDY_REF accession="SRP149932">
+                <IDENTIFIERS>
+                    <PRIMARY_ID>SRP149932</PRIMARY_ID>
+                    <EXTERNAL_ID namespace="dbGaP">phs001554</EXTERNAL_ID>
+                </IDENTIFIERS>
+            </STUDY_REF>
+            <DESIGN>
+                <DESIGN_DESCRIPTION>Library construction was performed using the Rubicon Genomics
+                    Thruplex-FD kit and 500ng of genomic DNA.  Samples were sheared using a Covaris
+                    focused ultrasonicator targeting a mean insert size of 300bp.  Shearing was
+                    followed by a SPRI bead cleanup and enzymatic steps, which performed template
+                    prep and added adapters. Libraries were amplified by PCR using custom indexed
+                    primers and then subjected to a final SPRI bead cleanup. Prior to sequencing
+                    library quality was confirmed by fluorescent quantification and by Agilent 2100
+                    Bioanalyzer profile. All libraries were sequenced on the Illumina HiSeq 2500
+                    platform with PE100 reads following the
+                    manufacturer's protocols.</DESIGN_DESCRIPTION>
+                <SAMPLE_DESCRIPTOR accession="SRS3389859" refcenter="phs001554" refname="95437">
+                    <IDENTIFIERS>
+                        <PRIMARY_ID>SRS3389859</PRIMARY_ID>
+                    </IDENTIFIERS>
+                </SAMPLE_DESCRIPTOR>
+                <LIBRARY_DESCRIPTOR>
+                    <LIBRARY_NAME>27-24685_H:12: 95437</LIBRARY_NAME>
+                    <LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY>
+                    <LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
+                    <LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION>
+                    <LIBRARY_LAYOUT>
+                        <PAIRED/>
+                    </LIBRARY_LAYOUT>
+                </LIBRARY_DESCRIPTOR>
+                <SPOT_DESCRIPTOR>
+                    <SPOT_DECODE_SPEC>
+                        <SPOT_LENGTH>200</SPOT_LENGTH>
+                        <READ_SPEC>
+                            <READ_INDEX>0</READ_INDEX>
+                            <READ_CLASS>Application Read</READ_CLASS>
+                            <READ_TYPE>Forward</READ_TYPE>
+                            <BASE_COORD>1</BASE_COORD>
+                        </READ_SPEC>
+                        <READ_SPEC>
+                            <READ_INDEX>1</READ_INDEX>
+                            <READ_CLASS>Application Read</READ_CLASS>
+                            <READ_TYPE>Reverse</READ_TYPE>
+                            <BASE_COORD>101</BASE_COORD>
+                        </READ_SPEC>
+                    </SPOT_DECODE_SPEC>
+                </SPOT_DESCRIPTOR>
+            </DESIGN>
+            <PLATFORM>
+                <ILLUMINA>
+                    <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+                </ILLUMINA>
+            </PLATFORM>
+            <EXPERIMENT_ATTRIBUTES>
+                <EXPERIMENT_ATTRIBUTE>
+                    <TAG>alignment_software</TAG>
+                    <VALUE>BWA-MEM v0.7.12-r1039</VALUE>
+                </EXPERIMENT_ATTRIBUTE>
+            </EXPERIMENT_ATTRIBUTES>
+        </EXPERIMENT>
+        <SUBMISSION alias="phs001554" center_name="NCI-phs001554" lab_name="" accession="SRA716296">
+            <IDENTIFIERS>
+                <PRIMARY_ID>SRA716296</PRIMARY_ID>
+            </IDENTIFIERS>
+        </SUBMISSION>
+        <Organization type="center">
+            <Name abbr="NCI-phs001554">NCI-phs001554</Name>
+        </Organization>
+        <STUDY center_name="dbGaP" alias="phs001554" accession="SRP149932">
+            <IDENTIFIERS>
+                <PRIMARY_ID>SRP149932</PRIMARY_ID>
+                <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA437033</EXTERNAL_ID>
+                <EXTERNAL_ID namespace="dbGaP">phs001554</EXTERNAL_ID>
+            </IDENTIFIERS>
+            <DESCRIPTOR>
+                <STUDY_TITLE>Detection of Colorectal Cancer Susceptibility Loci Using Genome-Wide
+                    Sequencing</STUDY_TITLE>
+                <STUDY_TYPE existing_study_type="Other"/>
+                <STUDY_ABSTRACT>The Genetics and Epidemiology of Colorectal Cancer Consortium
+                    (GECCO) is a collaborative effort comprised of a coordinating center and
+                    scientific researchers from well-characterized cohort and case-control studies.
+                    This international consortium aims to accelerate the discovery of common and
+                    rare genetic risk variants for colorectal cancer by conducting large-scale
+                    meta-analyses of existing and newly generated genome-wide association study
+                    (GWAS) data, whole genome sequencing, replicating and fine-mapping of genetic
+                    discoveries, and investigating how genetic risk variants are modified by
+                    environmental risk factors. To expand these efforts, we assembled case-control
+                    sets or nested case-control sets from 6 different North American or European
+                    studies. Summary descriptions and study participant inclusions/exclusion
+                    criteria for each of these studies are detailed below. Cancer Prevention Study
+                    II (CPS II): The CPS II Nutrition cohort is a prospective study... (for more see
+                    dbGaP study page.)</STUDY_ABSTRACT>
+                <CENTER_PROJECT_NAME>bp_data_submission_phs001554</CENTER_PROJECT_NAME>
+            </DESCRIPTOR>
+            <STUDY_ATTRIBUTES>
+                <STUDY_ATTRIBUTE>
+                    <TAG>parent_bioproject</TAG>
+                    <VALUE>PRJNA437032</VALUE>
+                </STUDY_ATTRIBUTE>
+            </STUDY_ATTRIBUTES>
+        </STUDY>
+        <SAMPLE alias="95437" accession="SRS3389859">
+            <IDENTIFIERS>
+                <PRIMARY_ID>SRS3389859</PRIMARY_ID>
+                <EXTERNAL_ID namespace="BioSample">SAMN08666328</EXTERNAL_ID>
+                <EXTERNAL_ID namespace="dbGaP" label="Sample name">1554-95437</EXTERNAL_ID>
+                <EXTERNAL_ID namespace="phs001554" label="submitted sample id">95437</EXTERNAL_ID>
+            </IDENTIFIERS>
+            <TITLE>Non-tumor DNA sample from Blood of a human male participant in the dbGaP study
+                "Detection of Colorectal Cancer Susceptibility Loci Using Genome-Wide
+                Sequencing"</TITLE>
+            <SAMPLE_NAME>
+                <TAXON_ID>9606</TAXON_ID>
+                <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+            </SAMPLE_NAME>
+            <SAMPLE_ATTRIBUTES>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>gap_accession</TAG>
+                    <VALUE>phs001554</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>submitter handle</TAG>
+                    <VALUE>NCI_CRC_Susceptibility</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>biospecimen repository</TAG>
+                    <VALUE>NCI_CRC_Susceptibility</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>study name</TAG>
+                    <VALUE>Detection of Colorectal Cancer Susceptibility Loci Using Genome-Wide
+                        Sequencing</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>study design</TAG>
+                    <VALUE>Case-Control</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>biospecimen repository sample id</TAG>
+                    <VALUE>95437</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>submitted sample id</TAG>
+                    <VALUE>95437</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>submitted subject id</TAG>
+                    <VALUE>95437</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>gap_sample_id</TAG>
+                    <VALUE>2957437</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>gap_subject_id</TAG>
+                    <VALUE>2474373</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>sex</TAG>
+                    <VALUE>male</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>body site</TAG>
+                    <VALUE>Blood</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>analyte type</TAG>
+                    <VALUE>DNA</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>is tumor</TAG>
+                    <VALUE>No</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>subject is affected</TAG>
+                    <VALUE>No</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>molecular data type</TAG>
+                    <VALUE>SNP/CNV Genotypes (NGS)</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>gap_consent_code</TAG>
+                    <VALUE>1</VALUE>
+                </SAMPLE_ATTRIBUTE>
+                <SAMPLE_ATTRIBUTE>
+                    <TAG>gap_consent_short_name</TAG>
+                    <VALUE>GRU</VALUE>
+                </SAMPLE_ATTRIBUTE>
+            </SAMPLE_ATTRIBUTES>
+        </SAMPLE>
+        <Pool>
+            <Member member_name="" accession="SRS3389859" sample_name="95437"
+                sample_title="Non-tumor DNA sample from Blood of a human male participant in the dbGaP study &quot;Detection of Colorectal Cancer Susceptibility Loci Using Genome-Wide Sequencing&quot;"
+                spots="75742584" bases="10983482026" tax_id="9606" organism="Homo sapiens">
+                <IDENTIFIERS>
+                    <PRIMARY_ID>SRS3389859</PRIMARY_ID>
+                    <EXTERNAL_ID namespace="BioSample">SAMN08666328</EXTERNAL_ID>
+                    <EXTERNAL_ID namespace="dbGaP" label="Sample name">1554-95437</EXTERNAL_ID>
+                    <EXTERNAL_ID namespace="phs001554" label="submitted sample id"
+                        >95437</EXTERNAL_ID>
+                </IDENTIFIERS>
+            </Member>
+        </Pool>
+        <RUN_SET>
+            <RUN accession="SRR7274639" alias="27-24685_H:12: 95437_files" total_spots="75742584"
+                total_bases="10983482026" size="4575072049" load_done="true"
+                published="2018-08-06 13:23:20" is_public="true" cluster_name="dbgap">
+                <IDENTIFIERS>
+                    <PRIMARY_ID>SRR7274639</PRIMARY_ID>
+                </IDENTIFIERS>
+                <EXPERIMENT_REF accession="SRX4178246">
+                    <IDENTIFIERS/>
+                </EXPERIMENT_REF>
+                <RUN_ATTRIBUTES>
+                    <RUN_ATTRIBUTE>
+                        <TAG>assembly</TAG>
+                        <VALUE>hs37d5</VALUE>
+                    </RUN_ATTRIBUTE>
+                    <RUN_ATTRIBUTE>
+                        <TAG>Bases</TAG>
+                        <VALUE>10983482026</VALUE>
+                    </RUN_ATTRIBUTE>
+                    <RUN_ATTRIBUTE>
+                        <TAG>Reads</TAG>
+                        <VALUE>151485168</VALUE>
+                    </RUN_ATTRIBUTE>
+                    <RUN_ATTRIBUTE>
+                        <TAG>coverage</TAG>
+                        <VALUE>3.5</VALUE>
+                    </RUN_ATTRIBUTE>
+                    <RUN_ATTRIBUTE>
+                        <TAG>AvgReadLength</TAG>
+                        <VALUE>73</VALUE>
+                    </RUN_ATTRIBUTE>
+                </RUN_ATTRIBUTES>
+                <Pool>
+                    <Member member_name="" accession="SRS3389859" sample_name="95437"
+                        sample_title="Non-tumor DNA sample from Blood of a human male participant in the dbGaP study &quot;Detection of Colorectal Cancer Susceptibility Loci Using Genome-Wide Sequencing&quot;"
+                        spots="75742584" bases="10983482026" tax_id="9606" organism="Homo sapiens">
+                        <IDENTIFIERS>
+                            <PRIMARY_ID>SRS3389859</PRIMARY_ID>
+                            <EXTERNAL_ID namespace="BioSample">SAMN08666328</EXTERNAL_ID>
+                            <EXTERNAL_ID namespace="dbGaP" label="Sample name"
+                                >1554-95437</EXTERNAL_ID>
+                            <EXTERNAL_ID namespace="phs001554" label="submitted sample id"
+                                >95437</EXTERNAL_ID>
+                        </IDENTIFIERS>
+                    </Member>
+                </Pool>
+                <CloudFiles>
+                    <CloudFile filetype="crai" provider="s3" location="s3.us-east-1"/>
+                    <CloudFile filetype="cram" provider="s3" location="s3.us-east-1"/>
+                </CloudFiles>
+            </RUN>
+        </RUN_SET>
+        <ControlledAccess study="phs001554" consent="GRU"/>
+    </EXPERIMENT_PACKAGE>
+    
+</EXPERIMENT_PACKAGE_SET>

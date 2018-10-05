@@ -36,9 +36,7 @@ def setCGCMetadata(samp, myFile):
  
 	myFile.metadata = {           
 		"library_id":"Lib"+sample,
-		"platform": "Illumina HiSeq",
 		'gender': gender,
-	    "experimental_strategy":"WGS",
 	    "sample_id":sample,
 	    "sample_type":sample_type,
 	    "primary_site":"Colorectal",
@@ -47,7 +45,7 @@ def setCGCMetadata(samp, myFile):
 	    "investigation":"GECCO",
 	    "group":group
 	}
-	#print(metadata)
+	print(myFile.metadata)
 	try:
 		myFile.save()
 	except ResourceNotModified as e:
@@ -57,13 +55,13 @@ def setCGCMetadata(samp, myFile):
 def processSample(samp, myProject, myVolume):
 	sample = samp.find("Attributes/Attribute[@attribute_name='submitted sample id']").text
 	print ("Sample:"+sample)
-	filename = sample+'.recal.cram.crai'
+	filename = sample+'.recal.cram'
 	files = api.files.query(project=myProject,names=[filename])	
 	print(api.remaining)
 	if len(files) > 0 :
 		for f in files:
 			print ("already imported " + f.name)
-			#setCGCMetadata(samp, f)
+			setCGCMetadata(samp, f)
 	else:
 		# Import file to the project
 		imp = api.imports.submit_import(volume=myVolume, project=myProject, location=filename)
@@ -99,7 +97,7 @@ if __name__ == "__main__":
 	myVolume = api.volumes.get('forei/sddp_phs001554')
 
 		
-	tree = ET.parse('gecco_biosample.xml')
+	tree = ET.parse('data/test_biosample.xml')
 	root = tree.getroot()
 	for samp in root:
 		processSample(samp, project, myVolume)  
