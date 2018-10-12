@@ -18,8 +18,9 @@ from sevenbridges.models.enums import ImportExportState
 #  GLOBALS
 FLAGS = {'targetFound': False,               # target project exists in CGC project
         }
-TARGET_PROJECT = 'forei/gecco'                       # project we will use in CGC (Settings > Project name in GUI)
-VOLUME = 'forei/sddp_phs001554'
+TARGET_PROJECT = 'forei/aggressive-prostate-cancer'                       # project we will use in CGC (Settings > Project name in GUI)
+VOLUME = 'forei/sddp_phs001524'
+CRAMPATH = 'CRAM/'
 
 def setCGCMetadata(samp, myFile):
 	sample = samp.find("Attributes/Attribute[@attribute_name='submitted sample id']").text
@@ -54,28 +55,21 @@ def setCGCMetadata(samp, myFile):
 
 
 def processSample(samp, myProject, myVolume):
-	sample = samp.find("Attributes/Attribute[@attribute_name='submitted sample id']").text
+	sample = samp.find("EXPERIMENT_REF").get('refname')
 	print ("Sample:"+sample)
-	filename = sample+'.recal.cram'
-	files = api.files.query(project=myProject,names=[filename])	
-	print(api.remaining)
-	if len(files) > 0 :
-		for f in files:
-			print ("already imported " + f.name)
-			setCGCMetadata(samp, f)
-	else:
+	for file in samp.findall(".DATA_BLOCK/FILES/FILE[@filetype='cram']"):
+		filename = file.get('filename')
+		print (filename)
+		files = api.files.query(project=myProject,names=[filename])	
+		print(api.remaining)
+		if len(files) > 0 :
+			for f in files:
+				print ("already imported " + f.name)
+				#setCGCMetadata(samp, file)
+		else:
 		# Import file to the project
-		imp = api.imports.submit_import(volume=myVolume, project=myProject, location=filename)
-		# Wait until the import finishes
-# 		while True:
-# 			import_status = imp.reload().state
-# 			if import_status in (ImportExportState.COMPLETED, ImportExportState.FAILED):
-# 				break
-# 			time.sleep(10)
-# 		# Continue with the import
-# 		if imp.state == ImportExportState.COMPLETED:
-# 			imported_file = imp.result
-# 			setCGCMetadata(samp, imported_file)
+			imp = api.imports.submit_import(volume=myVolume, project=myProject, location=CRAMPATH+filename)
+
 
 
 #%% CODE (broken into blocks below, this wilfl eventually become an iPython notebook
@@ -98,7 +92,7 @@ if __name__ == "__main__":
 	myVolume = api.volumes.get(VOLUME)
 
 		
-	tree = ET.parse('data/test_biosample.xml')
+	tree = ET.parse('../sbcgcapi/SRA_Submission_phs001524/run.xml')
 	root = tree.getroot()
 	for samp in root:
 		processSample(samp, project, myVolume)  
